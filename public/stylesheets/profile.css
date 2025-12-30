@@ -1,0 +1,63 @@
+body{
+  background-image: url("/assets/fondousuario.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+
+    .card-user{
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(10px); 
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 0 24px #6c63ff, 0 0 32px #00eaff36;
+      border-radius: 12px;
+
+      p{
+        margin-block: 2.3rem;
+        font-weight: bolder;
+        font-size: 1.2rem;
+        text-wrap: pretty;
+      }
+
+      img{
+        margin-block: 2rem;
+        max-width: 150px;
+        max-height: 150px;
+
+      }
+    }
+
+    .card-game{
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(10px); 
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 0 24px #6c63ff, 0 0 32px #00eaff36;
+      border-radius: 12px;
+      transition-duration: 0.5s;
+
+          &:hover{
+            transform: scale(1.1);
+}     
+
+          a{
+            background-color: rgb(200, 109, 236);
+            font-weight: bold;
+            border-radius: 20px;
+            font-family: 'Pixelify Sans', sans-serif;
+
+         } 
+
+          h5, p{
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+         }
+
+          img{
+            max-height: 200px;
+            object-fit: center;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+         }
+    }
+
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    >
+    <title>Editar Juego</title>
+    <link rel="stylesheet" href="/stylesheets/form.css">
+    <%-include('modules/links')%>
+  </head>
+  <header>
+   <%- include('modules/navbar') %>
+  </header>
+
+  <body>
+    <h2 class= "fs-1 text-center text-light">Modifica tu juego</h2>
+    <div class="d-flex justify-content-center">
+      <form
+        method="post"
+        action="/game/editGame/<%= gameEdit.game_id %>/<%= gameEdit.user_id %>"
+      >
+        <div class="form p-4">
+          <div class="d-flex flex-column p-2">
+            <label for="text">
+              Nombre:
+            </label>
+            <input
+              name="name"
+              value="<%= gameEdit.name %>"
+              type="text"
+            >
+          </div>
+          <div class="d-flex flex-column p-2">
+            <label for="text">
+              Review
+            </label>
+            <input
+              name="review"
+              value="<%= gameEdit.review %>"
+              type="text"
+            >
+          </div>
+          <div class="d-flex flex-column p-2">
+            <label for="text">Puntuacion</label>
+            <input
+              name="puntuacion"
+              value="<%= gameEdit.puntuacion %>"
+              type="text"
+            >
+          </div>
+          <div class="d-flex flex-column p-2">
+            <label for="text">Plataforma</label>
+            <input
+              name="platform"
+              value="<%= gameEdit.platform %>"
+              type="platform"
+            >
+          </div>
+          <div class="d-flex flex-column p-2">
+            <label for="text">Año de Venta</label>
+            <input
+              name="year_sale"
+              value="<%= gameEdit.year_sale %>"
+              type="number"
+            >
+          </div>
+          <p class="msg-allert"><%= message %></p>
+          <button type="submit" class="btn btn-primary">Aceptar</button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="history.go(-1)"
+          >Cancelar
+          </button>
+        </div>
+        
+      </form>
+
+    </div>
+    <footer>
+      <%-include('modules/footer.ejs') %>
+    </footer>
+  </body>
+
+</html>

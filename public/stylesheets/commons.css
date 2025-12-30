@@ -1,0 +1,54 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+.msg-allert{
+  color: red;
+}
+
+  
+ h1{
+    color: rgb(215, 14, 241);
+    font-size: 3rem;
+    font-family: 'Orbitron';
+  }
+
+  .a-style{
+    background-color: rgb(200, 109, 236);
+    font-weight: bold;
+    border-radius: 20px;
+    color: black;
+   
+   
+
+}
+
+
+  .a-style:hover{
+      background: rgb(235, 13, 235);
+      transition: ease-in-out all 0.4s;
+    }
+
+
+
+ h2{
+      font-size: 3rem;
+      text-shadow: 0 4px 16px;
+      margin-block: 5rem;
+      font-family: 'Orbitron';
+    } 
+    
+.style-nav{
+  padding: 0;
+}   
+
+.color-hamb{
+  color: white !important;  
+}
+
+
+

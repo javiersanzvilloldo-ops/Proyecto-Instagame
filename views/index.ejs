@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página principal</title>
+    <%- include('modules/links') %>
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+  </head>
+<body>
+  <header>
+    <%- include('modules/navbar') %>
+  </header>
+    
+    <main>
+
+      <section>
+        <h2 class="text-center text-sm-center text-light">GAMERS DESTACADOS</h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="d-flex justify-content-center gap-4 flex-wrap mt-5 mb-5">
+              <% user.forEach((elem) =>{ %>
+               <div class="card" style="width: 18rem;">
+                 <img src="/images/users/<%= elem.picture_user %>" class="card-img-top" alt="">
+                  <div class="card-body">
+                   <h5 class="card-title"><%= elem.first_name %> <%= elem.last_name %></h5>
+                      <p><%= elem.email%></p>
+                      <p class="card-text"><%= elem.description%></p>
+                      <a href="/users/profile/<%= elem.user_id %>" class="btn">
+                      Ver info de <%= elem.first_name %></a>
+                  </div>
+                </div>
+                 <% }) %>
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+
+    <footer>
+        <%- include('modules/footer.ejs') %>
+    </footer>
+
+
+
+  </body>
+</html>

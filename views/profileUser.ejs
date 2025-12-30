@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta 
+    charset="UTF-8">
+  <meta 
+     name="viewport" 
+     content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="/stylesheets/profile.css">
+  <%- include('modules/links') %>
+</head>
+   <header>
+     <%- include('modules/navbar') %>
+   </header>
+
+  <body>
+    <main>
+      <h2 class="text-center text-light text-sm-center">Mi espacio en InstaGame</h2>
+          <section class="container-xxl">
+             <div class="row">
+               <div class="col card-user d-flex flex-wrap justify-content-center justify-content-sm-evenly text-center">
+                <img class="img-fluid w-50 w-sm-25"
+                src="/images/users/<%= usuario.picture_user?usuario.picture_user:'user.webp' %>" alt="">
+                  <div>
+                    <p><%= usuario.first_name %> <%=usuario.last_name %></p>
+                    <p><%= usuario.email %></p>
+                    <p><%= usuario.description %></p>
+                   </div>
+               </div>
+             </div>
+          </section>
+          <section>
+              <h2 class="fs-1 text-center text-light">Biblioteca de juegos</h2>
+                 <div class="d-flex justify-content-center gap-4 flex-wrap mt-5">
+                   <% game.forEach((elem)=> { %>
+                    <div class="card-game" style="width: 18rem;">
+                      <img src="/images/games/<%= elem.picture %>" class="card-img-top">
+                      <div class="card-body">
+                        <h5><%= elem.name %></h5>
+                        <p><%= elem.review %></p>
+                        <% let rating = "" %>
+                        <% for ( let i = 0; i < elem.puntuacion; i++ ){  %>
+                        <% rating = rating + "*" %>
+                         <% } %>
+                        <p><%= rating %></p>
+                        <p><%= elem.platform %></p>
+                        <p><%= elem.year_sale %></p>
+                        <a href="/game/editGame/<%= elem.game_id %>" class="btn">Editar juego</a>
+                       <a
+                       href="/game/delTotal/<%= elem.game_id %>/<%= usuario.user_id %>" class="btn"
+                       >
+                       Eliminar
+                      </a>
+                      </div>
+                    </div>
+                 <%  }) %>
+                 </div>
+          </section>
+    </main>
+     <footer>
+       <%- include('modules/footer.ejs') %>
+    </footer>
+  </body>
+
+</html>

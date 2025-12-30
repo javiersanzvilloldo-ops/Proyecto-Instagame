@@ -1,0 +1,53 @@
+body{
+  background-image: linear-gradient(rgb(0,0,0, 0.4)), url("/assets/fondo1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed; 
+
+    .card{
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(10px); 
+      border: 2px solid rgba(255,255,255,0.15);
+      box-shadow: 0 0 24px #6c63ff, 0 0 32px #00eaff36;
+      border-radius: 20px;
+      transition-duration: 0.5s;
+
+      img{
+        object-fit: cover;
+        object-position: center;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+       &:hover{
+       transform: scale(1.1);
+    }
+
+      a{
+         background-color: rgb(200, 109, 236);
+         font-weight: bold;
+         border-radius: 20px;
+         font-family: 'Pixelify Sans', sans-serif;
+       } 
+
+      h5, p{
+        color: white;
+        font-family: 'Pixelify Sans', sans-serif;
+       }
+
+}
+   
+
+.card a:hover{
+      background: rgb(235, 13, 235);
+      transition: ease-in-out all 0.4s;
+}    
+
+img{
+  max-height: 200px;
+  object-fit: center;
+  
+}
+
+
+}
