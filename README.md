@@ -6,6 +6,7 @@ Plataforma social tipo Instagram para gamers. Node.js + Express + MySQL. Bootcam
 • Node.js + Express (Backend/API)  
 • MySQL (Base de datos)
 • JavaScript
+• CSS + Bootstrap (Frontend)
 
 ## 📱 Funcionalidades
 • Registro/Login gamers
