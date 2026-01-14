@@ -13,4 +13,4 @@ Plataforma social tipo Instagram para gamers. Node.js + Express + MySQL. Bootcam
 • Feed social tipo Instagram
 • API REST completa
 
-**Desarrollado en 8 semanas bootcamp** 🚀
+**Desarrollado a las 8 semanas de bootcamp** 🚀
